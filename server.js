@@ -1,4 +1,7 @@
-const express = require('express')
-const app = express()
+const express = require("express");
+const authRouter = require("./routes/auth-route");
+const app = express();
 
-app.listen(8000)
+app.use("/auth", authRouter);
+
+app.listen(8000);
